@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Inicio - Registro de Batallas{% endblock %}
+
+{% block contenido %}
+    <p>Total de batallas registradas: {{ total }}</p>
+    <div class="lista">
+    {% for b in batallas %}
+        <div class="tarjeta">
+            <h2>{{ b.nombre }}</h2>
+            <p>Lider: {{ b.lider }}</p>
+            <p>Resultado: {{ b.victoria|yesno:"Victoria,Derrota" }}</p>
+            <p>{{ b.descripcion|truncatewords:8 }}</p>
+            <a href="{% url 'batallas:detalle' b.id %}">Ver detalle</a>
+        </div>
+    {% empty %}
+        <p>No hay batallas registradas.</p>
+    {% endfor %}
+    </div>
+{% endblock %}

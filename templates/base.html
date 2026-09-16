@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}Registro de Batallas{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/batallas.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+        <h1>Registro de Batallas - Resistencia</h1>
+    </header>
+    <main>
+        {% block contenido %}{% endblock %}
+    </main>
+</body>
+</html>

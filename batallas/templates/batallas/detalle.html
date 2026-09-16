@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %}{{ batalla.nombre }}{% endblock %}
+
+{% block contenido %}
+    <h2>{{ batalla.nombre }}</h2>
+    <ul>
+        <li>Ubicacion: {{ batalla.ubicacion }}</li>
+        <li>Lider: {{ batalla.lider }}</li>
+        <li>Bajas: {{ batalla.bajas }}</li>
+        <li>Resultado: {{ batalla.victoria|yesno:"Victoria,Derrota" }}</li>
+    </ul>
+    <p>{{ batalla.descripcion }}</p>
+
+    {% if batalla.bajas > 3 %}
+        <p class="aviso">⚠️ Batalla con perdidas significativas</p>
+    {% endif %}
+
+    <a href="{% url 'batallas:inicio' %}">Volver a la portada</a>
+{% endblock %}

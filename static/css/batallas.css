@@ -1,0 +1,96 @@
+body {
+    background-color: #262421;
+    color: #e0dcd5;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a1815;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #b8860b;
+}
+
+header h1 {
+    color: #d4af37;
+    margin: 10px 0 0 0;
+}
+
+.logo {
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid #b8860b;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tarjeta {
+    background-color: #3a3630;
+    border: 1px solid #5a4a35;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.tarjeta h2 {
+    color: #d4af37;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.tarjeta a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #8b0000;
+    color: #e0dcd5;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tarjeta a:hover {
+    background-color: #a52a2a;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #3a3630;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #d4af37;
+}
+
+.aviso {
+    background-color: #4a1414;
+    color: #ff9999;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    border-left: 4px solid #8b0000;
+}
